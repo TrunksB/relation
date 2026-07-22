@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I am Sorry, Primah</title>
+    <style>
+        :root {
+            --primary-color: #e63946;
+            --bg-color: #fff5f5;
+            --text-color: #2b2d42;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background: var(--card-bg);
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(230, 57, 70, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #6c757d;
+            margin-bottom: 40px;
+        }
+
+        .caption-section {
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .category-title {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            border-bottom: 2px solid #ffe3e3;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .caption-card {
+            background: #fafafa;
+            border-left: 4px solid var(--primary-color);
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 0 8px 8px 0;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .caption-card:hover {
+            transform: translateX(5px);
+            background: #f1f1f1;
+        }
+
+        .caption-text {
+            font-size: 1.05rem;
+            margin: 0;
+            padding-right: 40px;
+        }
+
+        .copy-btn {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #adb5bd;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        .copy-btn:hover {
+            color: var(--primary-color);
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: #333;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            transition: transform 0.3s ease;
+            opacity: 0;
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>For Primah 💔</h1>
+    <p class="subtitle">Click any caption below to copy it and send it to her.</p>
+
+    <!-- Sweet & Sincere -->
+    <div class="caption-section">
+        <div class="category-title">Sweet & Sincere</div>
+        
+        <div class="caption-card" onclick="copyCaption(this)">
+            <p class="caption-text">My days are empty without your smile, Primah. I am deeply sorry for hurting you.</p>
+            <button class="copy-btn">📋</button>
+        </div>
+
+        <div class="caption-card" onclick="copyCaption(this)">
+            <p class="caption-text">I hate that I caused the person I love most so much pain. Please forgive me, Primah.</p>
+            <button class="copy-btn">📋</button>
+        </div>
+    </div>
+
+    <!-- Short & Direct -->
+    <div class="caption-section">
+        <div class="category-title">Short & Direct</div>
+        
+        <div class="caption-card" onclick="copyCaption(this)">
+            <p class="caption-text">I messed up, Primah. I'm so sorry and I want to make things right.</p>
+            <button class="copy-btn">📋</button>
+        </div>
+
+        <div class="caption-card" onclick="copyCaption(this)">
+            <p class="caption-text">Less of my pride, more of your happiness. I'm sorry, Primah.</p>
+            <button class="copy-btn">📋</button>
+        </div>
+    </div>
+
+    <!-- Deep & Reflective -->
+    <div class="caption-section">
+        <div class="category-title">Deep & Reflective</div>
+        
+        <div class="caption-card" onclick="copyCaption(this)">
+            <p class="caption-text">Your trust means everything to me, Primah. I promise to work hard to earn it back.</p>
+            <button class="copy-btn">📋</button>
+        </div>
+
+        <div class="caption-card" onclick="copyCaption(this)">
+            <p class="caption-text">I spoke without thinking and acted without clarity. You deserve better text, Primah. Forgive me.</p>
+            <button class="copy-btn">📋</button>
+        </div>
+    </div>
+</div>
+
+<div id="toast" class="toast">Caption copied to clipboard!</div>
+
+<script>
+    function copyCaption(element) {
+        const text = element.querySelector('.caption-text').innerText;
+        navigator.clipboard.writeText(text).then(() => {
+            const toast = document.getElementById('toast');
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2000);
+        });
+    }
+</script>
+
+</body>
+</html>
