@@ -202,67 +202,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For My Favorite Person</title>
-    <!-- Tailwind CSS for modern, responsive layouts -->
+    <!-- Tailwind CSS CDN -->
     <script src="https://tailwindcss.com"></script>
     <style>
-        /* Smooth dynamic styling for transitions */
+        /* Smooth dynamic transitions for buttons */
         .hidden-content {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+            transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease-out;
             opacity: 0;
         }
         .show-content {
-            max-height: 500px;
+            max-height: 600px;
             opacity: 1;
         }
-        /* Soft, floating animation for decorative hearts */
+        /* Soft, floating animation for decorative romantic icons */
         @keyframes float {
-            0% { transform: translateY(0px) rotate(0deg); opacity: 0.6; }
-            50% { transform: translateY(-20px) rotate(10deg); opacity: 0.9; }
-            100% { transform: translateY(0px) rotate(0deg); opacity: 0.6; }
+            0% { transform: translateY(0px) rotate(0deg); opacity: 0.5; }
+            50% { transform: translateY(-25px) rotate(15deg); opacity: 0.8; }
+            100% { transform: translateY(0px) rotate(0deg); opacity: 0.5; }
         }
         .floating-heart {
-            animation: float 4s ease-in-out infinite;
+            animation: float 5s ease-in-out infinite;
         }
     </style>
 </head>
-<body class="bg-gradient-to-tr from-rose-50 via-peach-50 to-pink-100 min-h-screen font-sans text-gray-800 relative overflow-x-hidden">
+<!-- PERFECTLY CENTERED BACKDROP: min-h-screen, flex, items-center, justify-center aligns everything perfectly -->
+<body class="bg-gradient-to-br from-rose-100 via-pink-200 to-red-100 min-h-screen font-sans text-gray-800 relative overflow-x-hidden flex items-center justify-center py-16 px-4">
 
-    <!-- FLOATING BACKGROUND DESIGNS -->
-    <div class="absolute top-10 left-5 text-rose-300 text-4xl floating-heart opacity-40">❤️</div>
-    <div class="absolute top-1/4 right-8 text-pink-300 text-5xl floating-heart opacity-30" style="animation-delay: 1s;">💖</div>
-    <div class="absolute bottom-1/3 left-8 text-rose-200 text-6xl floating-heart opacity-40" style="animation-delay: 2s;">✨</div>
-    <div class="absolute bottom-10 right-10 text-pink-300 text-4xl floating-heart opacity-50" style="animation-delay: 1.5s;">🌹</div>
+    <!-- DECORATIVE ROMANTIC BACKGROUND ELEMENTS -->
+    <div class="absolute top-12 left-12 text-rose-400 text-5xl floating-heart" style="animation-delay: 0s;">❤️</div>
+    <div class="absolute top-1/4 right-16 text-pink-400 text-6xl floating-heart" style="animation-delay: 1.5s;">💖</div>
+    <div class="absolute bottom-1/4 left-16 text-red-300 text-6xl floating-heart" style="animation-delay: 3s;">✨</div>
+    <div class="absolute bottom-12 right-12 text-rose-400 text-5xl floating-heart" style="animation-delay: 0.5s;">🌹</div>
 
-    <!-- MAIN CONTAINER -->
-    <main class="max-w-2xl mx-auto px-4 py-12 relative z-10">
+    <!-- MAIN CENTERING CONTAINER WITH GENEROUS PADDING -->
+    <main class="w-full max-w-2xl bg-white/60 backdrop-blur-xl rounded-[2.5rem] p-8 md:p-12 shadow-2xl border border-white/40 relative z-10 my-auto">
 
         <!-- HEADER SECTION -->
-        <header class="text-center mb-12">
-            <span class="text-xs uppercase tracking-widest text-rose-500 font-bold bg-rose-100 px-3 py-1 rounded-full">A Message From My Heart</span>
-            <h1 class="text-4xl md:text-5xl font-serif text-rose-700 mt-4 mb-2 font-bold">I Am So Sorry, Beautiful</h1>
-            <p class="text-gray-600 italic">Please give me a moment to explain...</p>
+        <header class="text-center mb-10">
+            <span class="text-xs uppercase tracking-widest text-rose-600 font-bold bg-rose-200/80 px-4 py-1.5 rounded-full shadow-sm">A Message From My Heart</span>
+            <h1 class="text-4xl md:text-5xl font-serif text-rose-800 mt-5 mb-3 font-bold drop-shadow-sm">I Am So Sorry, Beautiful</h1>
+            <p class="text-rose-700/80 italic text-base">Please give me a moment to explain...</p>
         </header>
 
-        <!-- ROMANTIC PICTURES GRID -->
-        <section class="grid grid-cols-2 gap-4 mb-10">
-            <div class="rounded-2xl overflow-hidden shadow-md transform -rotate-2 hover:rotate-0 transition duration-300 bg-white p-2">
-                <img src="https://unsplash.com" alt="Happy couple moment" class="w-full h-40 object-cover rounded-xl">
-                <p class="text-center text-xs text-rose-600 font-serif mt-2">Our happiest days</p>
+        <!-- ROMANTIC PICTURES GRID WITH ADDED PADDING -->
+        <section class="grid grid-cols-2 gap-6 mb-10 px-2">
+            <div class="rounded-2xl overflow-hidden shadow-lg transform -rotate-3 hover:rotate-0 transition duration-300 bg-white p-3 border border-rose-100">
+                <img src="https://unsplash.com" alt="Happy couple moment" class="w-full h-44 object-cover rounded-xl">
+                <p class="text-center text-sm text-rose-700 font-serif mt-3 font-medium">Our happiest days</p>
             </div>
-            <div class="rounded-2xl overflow-hidden shadow-md transform rotate-3 hover:rotate-0 transition duration-300 bg-white p-2">
-                <img src="https://unsplash.com" alt="Holding hands" class="w-full h-40 object-cover rounded-xl">
-                <p class="text-center text-xs text-rose-600 font-serif mt-2">Holding onto you</p>
+            <div class="rounded-2xl overflow-hidden shadow-lg transform rotate-3 hover:rotate-0 transition duration-300 bg-white p-3 border border-rose-100">
+                <img src="https://unsplash.com" alt="Holding hands" class="w-full h-44 object-cover rounded-xl">
+                <p class="text-center text-sm text-rose-700 font-serif mt-3 font-medium">Holding onto you</p>
             </div>
         </section>
 
-        <!-- THE SINCERE APOLOGY -->
-        <section class="bg-white/80 backdrop-blur-md rounded-3xl p-6 md:p-8 shadow-xl border border-rose-100 mb-6">
-            <h2 class="text-xl font-bold text-rose-800 border-b border-rose-100 pb-2 mb-4 flex items-center gap-2">
+        <!-- SINCERE APOLOGY SECTION -->
+        <section class="bg-white/90 rounded-3xl p-8 shadow-md border border-rose-100 mb-8">
+            <h2 class="text-2xl font-bold text-rose-800 border-b border-rose-100 pb-3 mb-5 flex items-center gap-3">
                 <span>😔</span> My Heartfelt Apology
             </h2>
-            <div class="space-y-4 text-gray-700 leading-relaxed text-sm md:text-base">
+            <div class="space-y-4 text-gray-700 leading-relaxed text-base">
                 <p>
                     I want to start by acknowledging my actions. I completely <strong>overreached</strong>, crossed lines I shouldn't have, and let my insecurities or impulses get the better of me. It wasn't fair to you, and it didn't reflect how much I respect your boundaries and space.
                 </p>
@@ -272,48 +273,44 @@
             </div>
         </section>
 
-        <!-- INTERACTIVE PROMISES BUTTON & CONTAINER -->
-        <section class="bg-white/80 backdrop-blur-md rounded-3xl p-6 md:p-8 shadow-xl border border-rose-100 mb-6">
-            <div class="text-center">
-                <button onclick="toggleSection('promises-content', 'promise-btn-icon')" class="w-full bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white font-semibold py-3 px-6 rounded-2xl shadow-lg transition duration-200 transform active:scale-95 flex items-center justify-between">
-                    <span class="flex items-center gap-2">🤝 <span>My Promises To Do Better</span></span>
-                    <span id="promise-btn-icon" class="transition-transform duration-200">➕</span>
-                </button>
-            </div>
+        <!-- INTERACTIVE PROMISES BUTTON -->
+        <section class="bg-white/90 rounded-3xl p-6 shadow-md border border-rose-100 mb-6">
+            <button onclick="toggleSection('promises-content', 'promise-btn-icon')" class="w-full bg-gradient-to-r from-rose-600 via-pink-600 to-rose-600 hover:from-rose-700 hover:to-pink-700 text-white font-semibold py-4 px-6 rounded-2xl shadow-md transition duration-200 transform active:scale-[0.98] flex items-center justify-between text-lg">
+                <span class="flex items-center gap-3">🤝 <span>My Promises To Do Better</span></span>
+                <span id="promise-btn-icon" class="transition-transform duration-300 text-xl">➕</span>
+            </button>
 
-            <!-- Hidden Content revealed on click -->
-            <div id="promises-content" class="hidden-content mt-4">
-                <ul class="space-y-3 text-gray-700 border-t border-rose-50 pt-4">
+            <!-- Hidden Content Panel -->
+            <div id="promises-content" class="hidden-content">
+                <ul class="space-y-4 text-gray-700 border-t border-rose-100 mt-5 pt-5 px-2">
                     <li class="flex items-start gap-3">
-                        <span class="text-rose-500 mt-1">✨</span>
-                        <span><strong>Daily Communication:</strong> I promise to communicate with you every single day, keeping you updated, sharing my thoughts, and always listening to yours without judgment.</span>
+                        <span class="text-rose-500 text-lg mt-0.5">✨</span>
+                        <span><strong class="text-rose-900">Daily Communication:</strong> I promise to communicate with you every single day, keeping you updated, sharing my thoughts, and always listening to yours without judgment.</span>
                     </li>
                     <li class="flex items-start gap-3">
-                        <span class="text-rose-500 mt-1">✨</span>
-                        <span><strong>Earning Your Trust:</strong> Trust is built through actions, not just words. I promise to show up consistently, be completely transparent, and actively do things that prove my devotion to you.</span>
+                        <span class="text-rose-500 text-lg mt-0.5">✨</span>
+                        <span><strong class="text-rose-900">Earning Your Trust:</strong> Trust is built through actions, not just words. I promise to show up consistently, be completely transparent, and actively do things that prove my devotion to you.</span>
                     </li>
                     <li class="flex items-start gap-3">
-                        <span class="text-rose-500 mt-1">✨</span>
-                        <span><strong>Respecting Space:</strong> I promise never to overreach or crowd you again. Next time, I will step back, take a breath, and handle situations with maturity.</span>
+                        <span class="text-rose-500 text-lg mt-0.5">✨</span>
+                        <span><strong class="text-rose-900">Respecting Space:</strong> I promise never to overreach or crowd you again. Next time, I will step back, take a breath, and handle situations with maturity.</span>
                     </li>
                 </ul>
             </div>
         </section>
 
-        <!-- INTERACTIVE PROJECTIONS BUTTON & CONTAINER -->
-        <section class="bg-white/80 backdrop-blur-md rounded-3xl p-6 md:p-8 shadow-xl border border-rose-100 mb-8">
-            <div class="text-center">
-                <button onclick="toggleSection('projections-content', 'projection-btn-icon')" class="w-full bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white font-semibold py-3 px-6 rounded-2xl shadow-lg transition duration-200 transform active:scale-95 flex items-center justify-between">
-                    <span class="flex items-center gap-2">🔮 <span>Our Future Together</span></span>
-                    <span id="projection-btn-icon" class="transition-transform duration-200">➕</span>
-                </button>
-            </div>
+        <!-- INTERACTIVE PROJECTIONS BUTTON -->
+        <section class="bg-white/90 rounded-3xl p-6 shadow-md border border-rose-100 mb-10">
+            <button onclick="toggleSection('projections-content', 'projection-btn-icon')" class="w-full bg-gradient-to-r from-pink-600 via-rose-600 to-pink-600 hover:from-pink-700 hover:to-rose-700 text-white font-semibold py-4 px-6 rounded-2xl shadow-md transition duration-200 transform active:scale-[0.98] flex items-center justify-between text-lg">
+                <span class="flex items-center gap-3">🔮 <span>Our Future Together</span></span>
+                <span id="projection-btn-icon" class="transition-transform duration-300 text-xl">➕</span>
+            </button>
 
-            <!-- Hidden Content revealed on click -->
-            <div id="projections-content" class="hidden-content mt-4">
-                <div class="space-y-3 text-gray-700 border-t border-rose-50 pt-4 leading-relaxed">
+            <!-- Hidden Content Panel -->
+            <div id="projections-content" class="hidden-content">
+                <div class="space-y-4 text-gray-700 border-t border-rose-100 mt-5 pt-5 px-2 leading-relaxed text-base">
                     <p>
-                        If you choose to give me another chance, I don't just see us resetting; I see us growing so much stronger. This hurdle is a wake-up call that will make me a better partner for you.
+                        If you choose to give me another chance, I don't just see us resetting; I see us growing so much stronger. This hurdle is a wake-up call that will make me a better, more mindful partner for you.
                     </p>
                     <p>
                         I project a future where our communication is seamless, where we laugh off the small things, and where we build an unbreakable bond founded on mutual respect. Imagine our next date night—free of tension, filled purely with love, and moving forward hand-in-hand.
@@ -323,25 +320,23 @@
         </section>
 
         <!-- FOOTER SIGN-OFF -->
-        <footer class="text-center text-gray-500 text-sm">
+        <footer class="text-center text-rose-800/70 text-sm font-medium pt-2 border-t border-rose-200/50">
             <p>Made with love, hoping for your forgiveness. ❤️</p>
         </footer>
 
     </main>
 
-    <!-- JAVASCRIPT FOR TOGGLE FUNCTIONALITY -->
+    <!-- INTERACTIVE TOGGLE JAVASCRIPT -->
     <script>
         function toggleSection(contentId, iconId) {
             const content = document.getElementById(contentId);
             const icon = document.getElementById(iconId);
             
             if (content.classList.contains('show-content')) {
-                // Hide it
                 content.classList.remove('show-content');
                 icon.textContent = '➕';
                 icon.style.transform = 'rotate(0deg)';
             } else {
-                // Show it
                 content.classList.add('show-content');
                 icon.textContent = '➖';
                 icon.style.transform = 'rotate(180deg)';
@@ -350,4 +345,3 @@
     </script>
 </body>
 </html>
-
