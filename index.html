@@ -205,6 +205,26 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://tailwindcss.com"></script>
     <style>
+
+         :root {
+            --primary-color: #e63946;
+            --bg-color: #fff5f5;
+            --text-color: #2b2d42;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
         /* Smooth dynamic transitions for buttons */
         .hidden-content {
             max-height: 0;
