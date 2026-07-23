@@ -225,6 +225,25 @@
             align-items: center;
             min-height: 100vh;
         }
+        .reveal_msg {
+            display: grid;
+            grid-template-columns: 2;
+            grid-template-rows: 1;
+        }
+        #btn1 {
+            border-radius: 1em;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4), transparent;
+            border: 2px solid rgba(255, 255, 255, .5);
+            border-right: 2px solid rgba(255, 255, 255, .2);
+            border-bottom: 2px solid rgba(255, 255, 255, .2);
+        }
+        #btn2 {
+            border-radius: 1em;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4), transparent;
+            border: 2px solid rgba(255, 255, 255, .2);
+            border-right: 2px solid rgba(255, 255, 255, .5);
+            border-bottom: 2px solid rgba(255, 255, 255, .2);
+        }
         /* Smooth dynamic transitions for buttons */
         .hidden-content {
             max-height: 0;
@@ -251,10 +270,10 @@
 <body class="bg-gradient-to-br from-rose-100 via-pink-200 to-red-100 min-h-screen font-sans text-gray-800 relative overflow-x-hidden flex items-center justify-center py-16 px-4">
 
     <!-- DECORATIVE ROMANTIC BACKGROUND ELEMENTS -->
-    <div class="absolute top-12 left-12 text-rose-400 text-5xl floating-heart" style="animation-delay: 0s;">❤️</div>
-    <div class="absolute top-1/4 right-16 text-pink-400 text-6xl floating-heart" style="animation-delay: 1.5s;">💖</div>
-    <div class="absolute bottom-1/4 left-16 text-red-300 text-6xl floating-heart" style="animation-delay: 3s;">✨</div>
-    <div class="absolute bottom-12 right-12 text-rose-400 text-5xl floating-heart" style="animation-delay: 0.5s;">🌹</div>
+    <div class="absolute top-12 left-12 text-rose-400 text-5xl floating-heart" style="animation-delay: 0s; align-text: center; font-size: 2em;">❤️</div>
+    <div class="absolute top-1/4 right-16 text-pink-400 text-6xl floating-heart" style="animation-delay: 1.5s; align-text: center; font-size: 2em;">💖</div>
+    <div class="absolute bottom-1/4 left-16 text-red-300 text-6xl floating-heart" style="animation-delay: 3s; align-text: center; font-size: 2em;">✨</div>
+    <div class="absolute bottom-12 right-12 text-rose-400 text-5xl floating-heart" style="animation-delay: 0.5s; align-text: center; font-size: 2em;">🌹</div>
 
     <!-- MAIN CENTERING CONTAINER WITH GENEROUS PADDING -->
     <main class="w-full max-w-2xl bg-white/60 backdrop-blur-xl rounded-[2.5rem] p-8 md:p-12 shadow-2xl border border-white/40 relative z-10 my-auto">
@@ -267,16 +286,7 @@
         </header>
 
         <!-- ROMANTIC PICTURES GRID WITH ADDED PADDING -->
-        <section class="grid grid-cols-2 gap-6 mb-10 px-2">
-            <div class="rounded-2xl overflow-hidden shadow-lg transform -rotate-3 hover:rotate-0 transition duration-300 bg-white p-3 border border-rose-100">
-                <img src="https://unsplash.com" alt="Happy couple moment" class="w-full h-44 object-cover rounded-xl">
-                <p class="text-center text-sm text-rose-700 font-serif mt-3 font-medium">Our happiest days</p>
-            </div>
-            <div class="rounded-2xl overflow-hidden shadow-lg transform rotate-3 hover:rotate-0 transition duration-300 bg-white p-3 border border-rose-100">
-                <img src="https://unsplash.com" alt="Holding hands" class="w-full h-44 object-cover rounded-xl">
-                <p class="text-center text-sm text-rose-700 font-serif mt-3 font-medium">Holding onto you</p>
-            </div>
-        </section>
+        
 
         <!-- SINCERE APOLOGY SECTION -->
         <section class="bg-white/90 rounded-3xl p-8 shadow-md border border-rose-100 mb-8">
@@ -294,8 +304,9 @@
         </section>
 
         <!-- INTERACTIVE PROMISES BUTTON -->
+        <div class="reveal_msg>
         <section class="bg-white/90 rounded-3xl p-6 shadow-md border border-rose-100 mb-6">
-            <button onclick="toggleSection('promises-content', 'promise-btn-icon')" class="w-full bg-gradient-to-r from-rose-600 via-pink-600 to-rose-600 hover:from-rose-700 hover:to-pink-700 text-white font-semibold py-4 px-6 rounded-2xl shadow-md transition duration-200 transform active:scale-[0.98] flex items-center justify-between text-lg">
+            <button id="btn1" onclick="toggleSection('promises-content', 'promise-btn-icon')" class="w-full bg-gradient-to-r from-rose-600 via-pink-600 to-rose-600 hover:from-rose-700 hover:to-pink-700 text-white font-semibold py-4 px-6 rounded-2xl shadow-md transition duration-200 transform active:scale-[0.98] flex items-center justify-between text-lg">
                 <span class="flex items-center gap-3">🤝 <span>My Promises To Do Better</span></span>
                 <span id="promise-btn-icon" class="transition-transform duration-300 text-xl">➕</span>
             </button>
@@ -321,7 +332,7 @@
 
         <!-- INTERACTIVE PROJECTIONS BUTTON -->
         <section class="bg-white/90 rounded-3xl p-6 shadow-md border border-rose-100 mb-10">
-            <button onclick="toggleSection('projections-content', 'projection-btn-icon')" class="w-full bg-gradient-to-r from-pink-600 via-rose-600 to-pink-600 hover:from-pink-700 hover:to-rose-700 text-white font-semibold py-4 px-6 rounded-2xl shadow-md transition duration-200 transform active:scale-[0.98] flex items-center justify-between text-lg">
+            <button id="btn2" onclick="toggleSection('projections-content', 'projection-btn-icon')" class="w-full bg-gradient-to-r from-pink-600 via-rose-600 to-pink-600 hover:from-pink-700 hover:to-rose-700 text-white font-semibold py-4 px-6 rounded-2xl shadow-md transition duration-200 transform active:scale-[0.98] flex items-center justify-between text-lg">
                 <span class="flex items-center gap-3">🔮 <span>Our Future Together</span></span>
                 <span id="projection-btn-icon" class="transition-transform duration-300 text-xl">➕</span>
             </button>
@@ -338,6 +349,7 @@
                 </div>
             </div>
         </section>
+        </div>
 
         <!-- FOOTER SIGN-OFF -->
         <footer class="text-center text-rose-800/70 text-sm font-medium pt-2 border-t border-rose-200/50">
